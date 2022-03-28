@@ -1,0 +1,21 @@
+for more information please visit:
+http://gex.cs.uni-tuebingen.de
+
+
+for Ubuntu (7.04 aka feisty), you need the following packets:
+
+g++
+pkg-config
+libxml2-dev
+
+simply open a terminal and type:
+
+sudo apt-get install pkg-config g++ libxml2-dev libsctp-dev 
+
+then go to the Main folder and type:
+./configure
+make
+
+to start the program:
+cd src
+./NatTester

@@ -1,0 +1,17 @@
+AC_INIT(src/main.cxx)
+AM_INIT_AUTOMAKE(linuxTester,0.1)
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_INSTALL
+
+AC_PROG_RANLIB
+
+# Checks for libraries.
+PKG_PROG_PKG_CONFIG
+PKG_CHECK_MODULES(LIBXML, [libxml-2.0])
+AC_CHECK_LIB(sctp, main, libgtk="-lsctp", AC_MSG_ERROR(you need libsctp-dev))
+
+
+AC_OUTPUT(Makefile src/Makefile src/tools/Makefile src/tester/Makefile src/stun/Makefile src/udp/Makefile src/upnp/Makefile)
+
+
